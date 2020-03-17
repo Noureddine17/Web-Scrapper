@@ -14,6 +14,7 @@ import ScanVF as SV
 import Scanop as SO
 import LireScan as LSN
 import ScanTrad as ST
+import Mangakakalot as MK
 path = r"C:\Users\maroc"
 
 def Download(download_url,name):
