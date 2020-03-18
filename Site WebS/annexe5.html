@@ -1,0 +1,80 @@
+<html>
+
+    <head>
+	
+		<title>ScanTrad</title>
+			  
+		<link rel="stylesheet" type="text/css" href="index.css">
+		
+	</head>
+	
+	<body>
+	
+		<h1 class="title1"> <a href="https://scantrad.net/"> ScanTrad</h1> </a>
+		
+		<div id="cadre">
+		
+			<div id="ajout">
+			
+				<p> Pour pouvoir scrapper les mangas voulu sur ce site, nous sommes partit du principe qu'il fallait une fonction qui stocke les images dans une liste. Pour ce faire nous avons crée la fonction image qui prend en
+				argument soup(soup qui permet de recuperer l'entiereté de la page html de l'url) puis la fonction navigate qui recupere le resultat, donc la liste contenant les images du chapitre.
+				Dans la fonction Navigate(url) on lui demande que si l'url est différent de 'Fin Du Manga' qu'il fasse une requete d'url et de mettre la dans la variable response avec response = requests.get(url) et de prendre l'html 
+				de l'url avec soup = BeautifulSoup(response.text, "html.parser"), puis on crée la variable ListeLiens pour stocker le resultat de la fonction image(soup).Enfin dans image(soup) on crée une liste vide ListeLiens
+				puis dans la variable Img on demande de chercher la balise 'img' dans l'html de l'url a l'aide du soup mis en argument.Puis on crée une boucle qui pour chaque element dans Img ajoute a la liste ListeLiens ce qu'il y a 
+				apres 'data-src' si la classe de la balise 'img' est égale a 'scimg' car c'est sous cette forme que sont stocker les images dans le site puis on ajoute LeSite = "https://scantrad.net/" a chaque element le liste car les 
+				images sont coupées sur ce site et on rajoute ce qui manque a l'aide de cette variable.On fait if item['data-src'] != "https://scantrad.net/images/scantrad.jpg" car c'est une pub qui fait bugger le programme car elle contient
+				le contenant de la variable LeSite et on se retrouve avec deux fois "https://scantrad.net/".</p>
+		
+				<img class ="displayed" src="images/ImgTrad.png">
+		
+			</div>
+			
+		</div>
+		
+		<div id="cadre">
+		
+			<div id ="ajout">
+		
+				<p>Enfin pour passer au chapitre suivant nous avons crée la fonction Next qui prend soup (définie précédement) et l'url: </p>
+			
+				<br>
+		
+				<img class ="displayed"src="images/TradNext.png"> 
+		
+				<br>
+				
+			</div>
+			
+		</div>
+		
+		<div id ="cadre">
+		
+			<div id="ajout">
+			
+				<p>Dans cette meme fonction nous faisons appelle a deux autres fonctions ici isole(url) qui nous permet
+				de récuperer uniquement le numero de chapitre de l'url, on le return en nombre entier pour pouvoir lui ajouter 1 pour passer au chapitre suivant:</p>
+				
+				<br> 
+			
+				<img class ="displayed" src="images/isoleTrad.png">.   
+			
+				<br>
+			
+				<p>Puis isole1(url) qui elle nous donne l'url sans le numéro de chapitre: </p><br>
+		
+				<img class ="displayed" src="images/urlTrad.png">
+			
+				<br>
+			
+				<p>Tout est stocker ensuite dans la variable NextUrl puis on transforme tout en string et on crée une boucle qui dit que si l'url nous renvoie une liste d'image vide a l'aide de la fonction image(soup) qui on le rappel 
+				nous renvoie la liste des images du chapitre alors on dit que la variable NextUrl= 'Fin Du Manga' en soit que le manga est fini sinon qu'on print tout simplement La valeur de NextUrl (elle prendra la valeur +1 jusqu'a
+				ce que NextUrl='Fin Du Manga') Il nous reste plus qu'a importer ce fichier dans la classe faite par le prof et tout fonctionne, N'oubliez pas de changer le chemin!!!</p>
+				
+				</div>
+			
+		</div>
+			 					
+  </body>
+  
+</html>
+

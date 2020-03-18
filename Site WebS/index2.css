@@ -1,0 +1,75 @@
+body{
+    text-align:center;
+    font-weight:bolder;
+    background-color:grey;
+	background-image:url("images/Fond.jpg");
+	background-repeat: repeat;
+	background-position : center;
+	background-Size : cover ;
+    font-family:Arial;
+}
+h1{
+	color:#09C6AB;
+	font-size: 32px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #09C6AB;
+    padding: 16px;
+    font-weight: lighter;
+    text-align: center;
+    display: inline;
+    margin-right: 950px;
+	width:500px;
+	height:60px;
+	background:white;
+	display: block;
+	border-top: 10px solid #09C6AB;
+	margin:auto;
+}
+.title1{
+	color:#09C6AB;
+	font-size: 32px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #09C6AB;
+    padding: 16px;
+    font-weight: lighter;
+    text-align: center;
+    display: inline;
+	width:500px;
+	height:40px;
+	background:white;
+	display: block;
+	border-top: 10px solid #09C6AB;
+	margin-left: auto;
+    margin-right: auto;
+
+}
+#cadre{
+	width:1000px;
+	height:1000px;
+	margin:50 50;
+	background:white;
+	display: block;
+	box-sixing: border-box;
+    min-height: 1px;
+    padding-left: 0px;
+    padding-right: 1px;
+	border-top: 10px solid #09C6AB;
+	-webkit-box-sizing: border-box;
+	margin-left: auto;
+    margin-right: auto;
+}
+#ajout{
+	font-size:15px;
+	font-style: normal;
+	font-weight: 100;
+}
+img.displayed {
+    display: block;
+    margin-left: auto;
+    margin-right: auto 
+}
+p {
+	text-align:center;
+	color: #686de0;
+}
+

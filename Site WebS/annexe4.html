@@ -1,0 +1,74 @@
+<html>
+
+    <head>
+	
+		<title>LireScan</title>
+			  
+		<link rel="stylesheet" type="text/css" href="index2.css">
+		
+	</head>
+	
+	<body>
+	
+		<h1 class="title1"> <a href="https://www.lirescan.me/"> LireScan</h1> </a>
+		
+		<div id="cadre">
+		
+			<div id="ajout">
+			
+				<p> Pour pouvoir scrapper les mangas voulu sur ce site, nous sommes partit du principe qu'il fallait une fonction qui stocke les images dans une liste. Pour ce faire nous avons crée la fonction lirescan qui prend en
+				argument l'url puis la fonction navigate qui recupere le resultat, donc la liste contenant les images du chapitre.
+				Dans la fonction Navigate(url) on lui demande que si l'url est différent de 'Fin Du Manga' qu'il fasse une requete d'url et de mettre la dans la variable response avec response = requests.get(url) et de prendre l'html 
+				de l'url avec soup = BeautifulSoup(response.text, "html.parser"), puis on crée la variable ListeLiens pour stocker le resultat de la fonction image(soup).Puis pour avoir la liste des images on passe par la fonction
+				image dans laquel on crée la liste ListeLiens puis une boucle tant que qui dit que tant que la liste ListeLiens est vide la variable Im prend tout les balises 'img' d'index [0] puis d'ajouter le 'src' de tout les balises
+				'img' d'index [0] car sur ce site une page html = a une image du coup dans la fonction lirescan on crée une boucle while qui tant la variable img qui est et sera toujours un string vide, et bien on faire url + "1" car sur 
+				lirescan les images de chapitre sont reparties sur differentes pages html ayant toute un nom donc dans la boucle on dit que si la balise "title" dans l'html de l'url est vide alors on dit que le chapitre est fini et si il 
+				n'est pas fait fini qu'on fasse tourner cette boucle jusqu'a ce que cette balise soit vide.Enfin il y avait un autre probleme qui ma compliqué la tache c'est que les url des images étaient séparé le site nous donnait que cette 
+				partie de l'url :"assets/data/lecture_en_ligne/Black-Box/42/01.png" du coup j'ai refait une boucle qui ajoute "https://www.lirescan.me" devant toutes les url pour avoir les url complet commme ceci: 
+				'https://www.lirescan.me/assets/data/lecture_en_ligne/Black-Box/42/01.png'</p>
+		
+				<img class ="displayed" src="images/LireScan!.png">
+		
+			</div>
+			
+		</div>
+		
+		<div id="cadre">
+		
+			<div id ="ajout">
+		
+				<p>Enfin pour passer au chapitre suivant nous avons crée la fonction Next qui prend soup (définie précédement) et l'url: </p>
+			
+				<br>
+		
+				<img class ="displayed"src="images/NextLireScan.png"> 
+		
+				<br>
+				
+				<p>Dans cette meme fonction nous faisons appelle a deux autres fonctions ici isole(url) qui nous permet
+				de récuperer uniquement le numero de chapitre de l'url, on le return en nombre entier pour pouvoir lui ajouter 1 pour passer au chapitre suivant:</p>
+				
+				<img class ="displayed" src="images/isoleLire.png">.
+				
+				<br>
+				
+				<p>Puis isole1(url) qui elle nous donne l'url sans le numéro de chapitre: </p><br>
+		
+				<br>
+		
+				<img class ="displayed" src="images/isole1Lire.png">
+				
+				<p>Tout est stocker ensuite dans la variable NextUrl puis on transforme tout en string. La particularité de ce site est que lorsqu'on entre un url inexistant (essentiel a Next()) on nous renvoie sur le dernier chapitre du manga 
+				du coup on crée une boucle qui dit que si la liste des images = a la liste des images du derniers url alors la variable NextUrl= 'Fin Du Manga' en soit que le manga est fini sinon qu'on print tout simplement La valeur de NextUrl (elle prendra la valeur +1 jusqu'a
+				ce que NextUrl='Fin Du Manga') Il nous reste plus qu'a importer ce fichier dans la classe faite par le prof et tout fonctionne, N'oubliez pas de changer le chemin!!!</p>		
+				
+				
+			</div>
+			
+		</div>
+		
+			 					
+  </body>
+  
+</html>
+
