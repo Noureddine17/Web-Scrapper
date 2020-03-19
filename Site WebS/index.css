@@ -72,4 +72,64 @@ p {
 	text-align:center;
 	color: #686de0;
 }
+.a{
+    margin-bottom:20px;
+}
+.b{
+    margin-bottom:20px;
+}
+.c{
+    margin-bottom:20px;
+}
+.d{
+    margin-bottom:20px;
+}
+.e{
+    margin-bottom:20px;
+}
+.f{
+    margin-bottom:20px;
+}
+.g{
+	margin-bottom:20px;
+}
+.an{
+	border-radius:4px;
+	background-color:#514CE2;
+	display:inline-block;
+	width:10%;
+	text-align:center;
+	padding-top:20px;
+	padding-bottom:27px;
+	text-decoration:none;
+	color:#000;
+	font-size:17px;
+	border-top-style:solid;
+	border-color:514CE2;
+	border-width:7px;
+}
+.an:hover {
+  background-color: #00FFF7;
+}
+.an:focus{
+	background-color: #eb2f06;
+}
+.boutonretour{
+  display: block;
+  margin-top: 1px;
+  margin-left:5px;
+  width: 100px;
+  text-align: center;
+  font-weight:200;
+  text-decoration:none;
+  padding:10px 12px;
+  border-radius:4px;
+  background-color:#38ada9;
+  color:white;
+  font-family:Arial;
+  position:relative;
+}
 
+.boutonretour:hover{
+    background-color:#4a69bd;
+}

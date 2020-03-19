@@ -9,6 +9,12 @@
 	</head>
 	
 	<body>
+		
+		<div class="btn">
+				
+		<a href="site_web_scraper (1).html" class="boutonretour">retour</a>
+		
+	</div>
 	
 		<h1 class="title1"> <a href="https://www.lirescan.me/"> LireScan</h1> </a>
 		
@@ -19,11 +25,11 @@
 				<p> Pour pouvoir scrapper les mangas voulu sur ce site, nous sommes partit du principe qu'il fallait une fonction qui stocke les images dans une liste. Pour ce faire nous avons crée la fonction lirescan qui prend en
 				argument l'url puis la fonction navigate qui recupere le resultat, donc la liste contenant les images du chapitre.
 				Dans la fonction Navigate(url) on lui demande que si l'url est différent de 'Fin Du Manga' qu'il fasse une requete d'url et de mettre la dans la variable response avec response = requests.get(url) et de prendre l'html 
-				de l'url avec soup = BeautifulSoup(response.text, "html.parser"), puis on crée la variable ListeLiens pour stocker le resultat de la fonction image(soup).Puis pour avoir la liste des images on passe par la fonction
-				image dans laquel on crée la liste ListeLiens puis une boucle tant que qui dit que tant que la liste ListeLiens est vide la variable Im prend tout les balises 'img' d'index [0] puis d'ajouter le 'src' de tout les balises
-				'img' d'index [0] car sur ce site une page html = a une image du coup dans la fonction lirescan on crée une boucle while qui tant la variable img qui est et sera toujours un string vide, et bien on faire url + "1" car sur 
+				de l'url avec soup = BeautifulSoup(response.text, "html.parser"), puis on crée la variable ListeLiens pour stocker le resultat de la fonction lirescan(url).Puis pour avoir la liste des images on passe par la fonction
+				image(soup) dans laquel on crée la liste ListeLiens puis une boucle tant que qui dit que tant que la liste ListeLiens est vide la variable Im prend tout les balises 'img' d'index [0] puis d'ajouter le 'src' de tout les balises
+				'img' d'index [0] car sur ce site une page html = a une image du coup dans la fonction lirescan on crée une boucle while qui tant la variable img qui est et sera toujours un string vide, et bien on faire url + 1 car sur 
 				lirescan les images de chapitre sont reparties sur differentes pages html ayant toute un nom donc dans la boucle on dit que si la balise "title" dans l'html de l'url est vide alors on dit que le chapitre est fini et si il 
-				n'est pas fait fini qu'on fasse tourner cette boucle jusqu'a ce que cette balise soit vide.Enfin il y avait un autre probleme qui ma compliqué la tache c'est que les url des images étaient séparé le site nous donnait que cette 
+				n'est pas fait fini qu'on fasse tourner cette boucle jusqu'a ce que cette balise soit vide.Enfin il y avait un autre probleme qui ma compliqué la tache c'est que les url des images étaient séparées, le site nous donnait que cette 
 				partie de l'url :"assets/data/lecture_en_ligne/Black-Box/42/01.png" du coup j'ai refait une boucle qui ajoute "https://www.lirescan.me" devant toutes les url pour avoir les url complet commme ceci: 
 				'https://www.lirescan.me/assets/data/lecture_en_ligne/Black-Box/42/01.png'</p>
 		

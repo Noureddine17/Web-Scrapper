@@ -9,6 +9,12 @@
 	</head>
 	
 	<body>
+		
+		<div class="btn">
+				
+		<a href="site_web_scraper (1).html" class="boutonretour">retour</a>
+		
+	</div>
 	
 		<h1 class="title1"> <a href="https://www.frscan.me/"> FrScan</h1> </a>
 		
@@ -22,7 +28,7 @@
 				de l'url avec soup = BeautifulSoup(response.text, "html.parser"), puis on crée la variable ListeLiens pour stocker le resultat de la fonction image(soup).Enfin dans image(soup) on crée une liste vide ListeLiens
 				puis dans la variable Im on demande de chercher la balise 'img' dans l'html de l'url a l'aide du soup mis en argument.Puis on crée une boucle qui pour chaque element dans Im ajoute a la liste ListeLiens ce qu'il y a 
 				apres 'data-src' si la classe de la balise 'img' est égale a 'img-responsive' car c'est sous cette forme que sont stocker les images dans le site.Ensuite on enleve l'espace car dans les url du site d'une part ils étaient
-				coupés et avant un espace au debut du coup on les enleves avec strip et on ajoute trunk a la bonne liste.(On rapel que trunk="https:"</p>
+				coupés et avaient un espace au debut du coup on les enleves avec strip et on ajoute trunk a la bonne liste.(On rapel que trunk="https:")</p>
 		
 				<img class ="displayed" src="images/imageFR.png">
 		
@@ -38,7 +44,7 @@
 			
 				<br>
 		
-				<img class ="displayed"src="images/isoleFR.png"> 
+				<img class ="displayed"src="images/capture2.png"> 
 		
 				<br>
 				

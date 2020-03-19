@@ -10,6 +10,12 @@
 	
 	<body>
 	
+	<div class="btn">
+				
+		<a href="site_web_scraper (1).html" class="boutonretour">retour</a>
+		
+	</div>
+	
 		<h1 class="title1"> <a href="https://www.lelscan-vf.com/"> LELSCAN</h1> </a>
 		
 		<div id="cadre">
@@ -18,7 +24,7 @@
 			
 				<p> Pour pouvoir scrapper les mangas voulu sur ce site, nous sommes partit du principe qu'il fallait une fonction qui stocke les images dans une liste. Pour ce faire nous avons crée la fonction image qui prend en
 				argument soup(soup qui permet de recuperer l'entiereté de la page html de l'url) puis la fonction navigate qui recupere le resultat, donc la liste contenant les images du chapitre.
-				Dans la fonction Navigate(url) on lui demande que si l'url est différent de 'Fin Du Manga' qu'il fasse une requete d'url et de mettre la dans la variable response avec response = requests.get(url) et de prendre l'html 
+				Dans la fonction Navigate(url) on lui demande que si l'url est différent de 'Fin Du Manga' qu'il fasse une requete d'url et de la mettre dans la variable response avec response = requests.get(url) et de prendre l'html 
 				de l'url avec soup = BeautifulSoup(response.text, "html.parser"), puis on crée la variable ListeLiens pour stocker le resultat de la fonction image(soup).Enfin dans image(soup) on crée une liste vide ListeLiens
 				puis dans la variable Im on demande de chercher la balise 'img' dans l'html de l'url a l'aide du soup mis en argument.Puis on crée une boucle qui pour chaque element dans Im ajoute a la liste ListeLiens ce qu'il y a 
 				apres 'data-src' si la classe de la balise 'img' est égale a 'img-responsive' car c'est sous cette forme que sont stocker les images dans le site.</p>
@@ -50,7 +56,7 @@
 			<div id="ajout">
 			
 				<p>Dans cette meme fonction nous faisons appelle a deux autres fonctions ici isole(url) qui nous permet
-				de récuperer uniquement le numero de chapitre de l'url, on le return en nombre entier pour pouvoir lui ajouter 1 pour passer au chapitre suivant:</p>
+				de récuperer uniquement le numero de chapitre de l'url, on le return en nombre entier pour pouvoir lui ajoutera 1 pour passer au chapitre suivant:</p>
 				
 				<br> 
 			
