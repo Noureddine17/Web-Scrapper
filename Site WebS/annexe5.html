@@ -22,12 +22,12 @@
 		
 			<div id="ajout">
 			
-				<p> Pour pouvoir scrapper les mangas voulu sur ce site, nous sommes partit du principe qu'il fallait une fonction qui stocke les images dans une liste. Pour ce faire nous avons crée la fonction image qui prend en
+				<p> Pour pouvoir scrapper les mangas voulu sur ce site, nous sommes parti du principe qu'il fallait une fonction qui stocke les images dans une liste. Pour ce faire nous avons créée la fonction image qui prend en
 				argument soup(soup qui permet de recuperer l'entiereté de la page html de l'url) puis la fonction navigate qui recupere le resultat, donc la liste contenant les images du chapitre.
-				Dans la fonction Navigate(url) on lui demande que si l'url est différent de 'Fin Du Manga' qu'il fasse une requete d'url et de mettre la dans la variable response avec response = requests.get(url) et de prendre l'html 
+				Dans la fonction Navigate(url) on lui demande que si l'url est différent de 'Fin Du Manga' qu'il fasse une requete d'url et de la mettre dans la variable response avec response = requests.get(url) et de prendre l'html 
 				de l'url avec soup = BeautifulSoup(response.text, "html.parser"), puis on crée la variable ListeLiens pour stocker le resultat de la fonction image(soup).Enfin dans image(soup) on crée une liste vide ListeLiens
-				puis dans la variable Img on demande de chercher la balise 'img' dans l'html de l'url a l'aide du soup mis en argument.Puis on crée une boucle qui pour chaque element dans Img ajoute a la liste ListeLiens ce qu'il y a 
-				apres 'data-src' si la classe de la balise 'img' est égale a 'scimg' car c'est sous cette forme que sont stocker les images dans le site puis on ajoute LeSite = "https://scantrad.net/" a chaque element le liste car les 
+				puis dans la variable Img on demande de chercher la balise 'img' dans l'html de l'url a l'aide du soup mis en argument.Puis on crée une boucle qui pour chaques elements dans Img ajoute a la liste ListeLiens ce qu'il y a 
+				apres 'data-src' si la classe de la balise 'img' est égale a 'scimg' car c'est sous cette forme que sont stocké les images dans le site.Puis on ajoute la variable LeSite = "https://scantrad.net/" a chaque element le liste car les 
 				images sont coupées sur ce site et on rajoute ce qui manque a l'aide de cette variable.On fait if item['data-src'] != "https://scantrad.net/images/scantrad.jpg" car c'est une pub qui fait bugger le programme car elle contient
 				le contenant de la variable LeSite et on se retrouve avec deux fois "https://scantrad.net/".</p>
 		
@@ -72,7 +72,7 @@
 			
 				<br>
 			
-				<p>Tout est stocker ensuite dans la variable NextUrl puis on transforme tout en string et on crée une boucle qui dit que si l'url nous renvoie une liste d'image vide a l'aide de la fonction image(soup) qui on le rappel 
+				<p>Tout est stocké ensuite dans la variable NextUrl puis on transforme tout en string et on crée une boucle qui dit que si l'url nous renvoie une liste d'image vide a l'aide de la fonction image(soup) qui on le rappel 
 				nous renvoie la liste des images du chapitre alors on dit que la variable NextUrl= 'Fin Du Manga' en soit que le manga est fini sinon qu'on print tout simplement La valeur de NextUrl (elle prendra la valeur +1 jusqu'a
 				ce que NextUrl='Fin Du Manga') Il nous reste plus qu'a importer ce fichier dans la classe faite par le prof et tout fonctionne, N'oubliez pas de changer le chemin!!!</p>
 				

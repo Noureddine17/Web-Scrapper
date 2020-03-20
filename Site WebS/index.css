@@ -9,12 +9,11 @@ body{
     font-family:Arial;
 }
 h1{
-	color:#09C6AB;
+	color:red;
 	font-size: 32px;
     font-family: Arial, Helvetica, sans-serif;
-    color: #09C6AB;
     padding: 16px;
-    font-weight: lighter;
+    font-weight: bold;
     text-align: center;
     display: inline;
     margin-right: 950px;
@@ -26,12 +25,11 @@ h1{
 	margin:auto;
 }
 .title1{
-	color:#09C6AB;
+	font-weight:bold;
+	color:red;
 	font-size: 32px;
     font-family: Arial, Helvetica, sans-serif;
-    color: #09C6AB;
     padding: 16px;
-    font-weight: lighter;
     text-align: center;
     display: inline;
 	width:500px;
